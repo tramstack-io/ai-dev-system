@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --radius: 0.5rem;
+  --container-max: 72rem;
+  --border: #d0d7de;
+  --text: #1a1a1a;
+  --bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header,
+main,
+footer {
+  padding: var(--space-2);
+}
+
+main {
+  width: min(100% - (var(--space-2) * 2), var(--container-max));
+  margin-inline: auto;
+}
+
+section > h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.card {
+  margin: 0;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 0.35);
+  border-color: #b8c2cc;
+}
+
+.card h3 {
+  margin: 0 0 var(--space-1);
+  font-size: 1.125rem;
+}
+
+.card p {
+  margin: 0 0 var(--space-2);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  header,
+  main,
+  footer {
+    padding: var(--space-3);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
