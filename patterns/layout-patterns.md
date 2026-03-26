@@ -123,6 +123,41 @@ Pattern notes:
 Related example:
 - `examples/responsive-card-grid/`
 
+---
+
+---
+
+## 8. Weekly Planner Grid Pattern
+
+Use for:
+- Weekly planning layouts
+- Dashboard-style personal tools
+- Structured card-based planning UIs
+- Multi-column content blocks with repeated sections
+
+Structure:
+- One main page heading
+- Intro/supporting paragraph
+- A planner section with a heading
+- A reusable `.planner-grid` wrapper
+- Repeated day cards using `article`
+- Nested sections for priorities and notes
+
+Recommended layout:
+- 1 column on mobile
+- 2 columns on tablet
+- 4 columns on desktop
+
+Pattern notes:
+- Use a named grid class instead of styling by DOM structure
+- Keep cards visually consistent and self-contained
+- Separate internal content areas clearly
+- Use spacing tokens for rhythm and consistency
+- Review in browser before treating as complete
+
+Related example:
+- `examples/weekly-planner/`
+
 ## Purpose
 
 This file grows over time as new layout patterns are discovered and refined.

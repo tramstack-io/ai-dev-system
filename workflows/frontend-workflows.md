@@ -68,6 +68,17 @@ Steps:
 
 ---
 
+## 5. Example Workflow: Weekly Planner
+
+1. Define the layout goal clearly
+2. Use Cursor to draft HTML structure
+3. Review semantics before accepting
+4. Generate CSS with clear responsive requirements
+5. Refine selectors for reusability
+6. Review visually in browser
+7. Extract reusable pattern into `patterns/`
+8. Commit once the build + pattern are complete
+
 ## Purpose
 
 This file grows into a library of repeatable frontend workflows that connect reasoning, execution, and memory.
