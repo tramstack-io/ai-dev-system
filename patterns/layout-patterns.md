@@ -125,8 +125,6 @@ Related example:
 
 ---
 
----
-
 ## 8. Weekly Planner Grid Pattern
 
 Use for:
@@ -134,19 +132,51 @@ Use for:
 - Dashboard-style personal tools
 - Structured card-based planning UIs
 - Multi-column content blocks with repeated sections
+- Any repeated-card layout needing consistent rhythm
 
 Structure:
-- One main page heading
-- Intro/supporting paragraph
-- A planner section with a heading
-- A reusable `.planner-grid` wrapper
+- One main page heading (`h1`)
+- Intro or supporting paragraph
+- A labelled planner section (`h2` or `h3`)
+- A `.planner-grid` wrapper (named class, not DOM-dependent)
 - Repeated day cards using `article`
-- Nested sections for priorities and notes
+- Nested sections inside each card for priorities, notes, or custom slots
+- Optional: a footer or summary row beneath the grid
 
 Recommended layout:
 - 1 column on mobile
 - 2 columns on tablet
-- 4 columns on desktop
+- 4 columns on desktop (7 for a full week if space allows)
+
+Spacing and tokens:
+- Use spacing tokens for gap, padding, and margin — avoid hardcoded values
+- Maintain consistent internal card padding across all breakpoints
+- Use a shared card height only if alignment across rows is required
+
+Card structure (per day):
+- Card heading (day name or label)
+- Primary content slot (e.g. priorities list)
+- Secondary content slot (e.g. notes or free text)
+- Optional: status indicator, tag, or completion marker
+
+Naming conventions (replace planner/class prefix where appropriate dependent on project type context):
+- `.planner-grid` — outer grid wrapper
+- `.planner-card` — individual day or unit card
+- `.planner-card__heading` — card title
+- `.planner-card__priorities` — primary content area
+- `.planner-card__notes` — secondary content area
+- Extend with modifiers: `.planner-card--today`, `.planner-card--empty`
+
+Reusability notes:
+- The grid wrapper is not week-specific — it can hold any repeated card unit
+- Cards should be fully self-contained with no layout dependency on siblings
+- Slot names (priorities, notes) can be renamed or extended per use case
+- Pattern works in CMS-driven or template-based environments without JS
+
+Accessibility:
+- Use `article` for each card (self-contained, meaningful unit)
+- Ensure heading hierarchy is logical within each card
+- Avoid relying on colour alone for status or state
 
 Pattern notes:
 - Use a named grid class instead of styling by DOM structure
@@ -154,6 +184,7 @@ Pattern notes:
 - Separate internal content areas clearly
 - Use spacing tokens for rhythm and consistency
 - Review in browser before treating as complete
+- Do not couple this pattern to weekly planning specifically — name slots generically if reusing across contexts
 
 Related example:
 - `examples/weekly-planner/`
