@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apple-style Feature Grid</title>
+    <link rel="stylesheet" href="styles.html" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <p class="eyebrow">Design that feels effortless</p>
+        <h1>Apple-style Feature Grid</h1>
+        <p class="subhead">
+          Responsive 2x2 grid on desktop/tablet, collapsing to a single column on mobile. Each card opens an
+          accessible modal with more information.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="feature-section" aria-labelledby="features-heading">
+        <div class="section-head">
+          <h2 id="features-heading">Features</h2>
+          <p class="section-subhead">Hover a card for a subtle GSAP interaction. Keyboard users get the same feedback.</p>
+        </div>
+
+        <div class="card-grid" role="list" aria-label="Feature cards">
+          <article class="card-slot" role="listitem">
+            <button
+              class="feature-card"
+              type="button"
+              data-modal="modal-privacy"
+              aria-haspopup="dialog"
+              aria-controls="modal-privacy"
+            >
+              <div class="card-inner">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M12 3l7 4v6c0 5-3 8-7 8s-7-3-7-8V7l7-4z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.2 12.2l1.8 1.8 3.8-4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h3 class="card-title">Privacy first</h3>
+                <p class="card-summary">Minimize data exposure with clear controls and thoughtful defaults.</p>
+                <span class="card-cta"
+                  >Learn more<span class="sr-only"> about Privacy first</span></span
+                >
+              </div>
+            </button>
+          </article>
+
+          <article class="card-slot" role="listitem">
+            <button
+              class="feature-card"
+              type="button"
+              data-modal="modal-performance"
+              aria-haspopup="dialog"
+              aria-controls="modal-performance"
+            >
+              <div class="card-inner">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M21 12a9 9 0 1 1-2.64-6.36"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M21 3v6h-6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <h3 class="card-title">Seamless performance</h3>
+                <p class="card-summary">Fast, stable interactions that feel responsive, not distracting.</p>
+                <span class="card-cta"
+                  >Learn more<span class="sr-only"> about Seamless performance</span></span
+                >
+              </div>
+            </button>
+          </article>
+
+          <article class="card-slot" role="listitem">
+            <button
+              class="feature-card"
+              type="button"
+              data-modal="modal-design-tokens"
+              aria-haspopup="dialog"
+              aria-controls="modal-design-tokens"
+            >
+              <div class="card-inner">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M4 7.5C4 6.12 5.12 5 6.5 5H20v14H6.5C5.12 19 4 17.88 4 16.5v-9z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 9h8M8 12h6M8 15h4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h3 class="card-title">Design tokens</h3>
+                <p class="card-summary">Consistent spacing, radius, and color systems for a unified UI language.</p>
+                <span class="card-cta"
+                  >Learn more<span class="sr-only"> about Design tokens</span></span
+                >
+              </div>
+            </button>
+          </article>
+
+          <article class="card-slot" role="listitem">
+            <button
+              class="feature-card"
+              type="button"
+              data-modal="modal-sync"
+              aria-haspopup="dialog"
+              aria-controls="modal-sync"
+            >
+              <div class="card-inner">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                      d="M21 12a9 9 0 0 0-15.3-6.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M7 3H3v4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M3 12a9 9 0 0 0 15.3 6.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M17 21h4v-4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <h3 class="card-title">Sync everywhere</h3>
+                <p class="card-summary">Keep experiences consistent across devices, screens, and sessions.</p>
+                <span class="card-cta"
+                  >Learn more<span class="sr-only"> about Sync everywhere</span></span
+                >
+              </div>
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal: Privacy first -->
+    <div
+      class="modal"
+      id="modal-privacy"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-privacy-title"
+      tabindex="-1"
+    >
+      <div class="modal__overlay" data-modal-close="modal-privacy" aria-hidden="true"></div>
+      <div class="modal__dialog" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modal-privacy-title">Privacy first</h2>
+          <button type="button" class="modal__close" data-modal-close="modal-privacy" aria-label="Close dialog">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal__body">
+          <p>
+            Clear, user-first privacy reduces friction and builds trust. This dialog demonstrates an accessible,
+            focus-trapped modal pattern.
+          </p>
+          <ul class="modal__list">
+            <li>Keyboard-first interaction and visible focus.</li>
+            <li>Respectful defaults and transparent UI.</li>
+            <li>Motion that can be disabled via reduced-motion.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Seamless performance -->
+    <div
+      class="modal"
+      id="modal-performance"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-performance-title"
+      tabindex="-1"
+    >
+      <div class="modal__overlay" data-modal-close="modal-performance" aria-hidden="true"></div>
+      <div class="modal__dialog" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modal-performance-title">Seamless performance</h2>
+          <button
+            type="button"
+            class="modal__close"
+            data-modal-close="modal-performance"
+            aria-label="Close dialog"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal__body">
+          <p>
+            Micro-interactions should feel smooth and intentional. The hover effect uses a small GSAP transform
+            for an “Apple-like” lift.
+          </p>
+          <ul class="modal__list">
+            <li>Subtle GSAP hover: translate up + slight scale.</li>
+            <li>Same feedback on keyboard focus.</li>
+            <li>Reduced motion supported.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Design tokens -->
+    <div
+      class="modal"
+      id="modal-design-tokens"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-design-tokens-title"
+      tabindex="-1"
+    >
+      <div class="modal__overlay" data-modal-close="modal-design-tokens" aria-hidden="true"></div>
+      <div class="modal__dialog" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modal-design-tokens-title">Design tokens</h2>
+          <button
+            type="button"
+            class="modal__close"
+            data-modal-close="modal-design-tokens"
+            aria-label="Close dialog"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal__body">
+          <p>
+            Tokens help keep visual language consistent: spacing, radius, typography, and color all stay aligned across
+            the UI.
+          </p>
+          <ul class="modal__list">
+            <li>Rounded surfaces and subtle borders.</li>
+            <li>Rhythm via consistent spacing steps.</li>
+            <li>Contrast that stays readable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Sync everywhere -->
+    <div
+      class="modal"
+      id="modal-sync"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-sync-title"
+      tabindex="-1"
+    >
+      <div class="modal__overlay" data-modal-close="modal-sync" aria-hidden="true"></div>
+      <div class="modal__dialog" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modal-sync-title">Sync everywhere</h2>
+          <button type="button" class="modal__close" data-modal-close="modal-sync" aria-label="Close dialog">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal__body">
+          <p>
+            Consistency across breakpoints matters. This layout uses CSS Grid and maintains the 2x2 structure on
+            desktop/tablet while stacking on mobile.
+          </p>
+          <ul class="modal__list">
+            <li>2 columns on mobile? No: single column stack.</li>
+            <li>2 columns on tablet/desktop for a 2x2 grid.</li>
+            <li>Accessible focus behavior everywhere.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const mainEl = document.querySelector("main");
+        let lastFocusedEl = null;
+        let currentModal = null;
+
+        function getFocusable(container) {
+          return Array.from(
+            container.querySelectorAll(
+              'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            )
+          ).filter((el) => !el.hasAttribute("aria-hidden"));
+        }
+
+        function trapFocus(event) {
+          if (!currentModal) return;
+          if (event.key !== "Tab") return;
+          const focusables = getFocusable(currentModal);
+          if (focusables.length === 0) return;
+
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          const active = document.activeElement;
+
+          if (event.shiftKey) {
+            if (active === first || !currentModal.contains(active)) {
+              event.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (active === last) {
+              event.preventDefault();
+              first.focus();
+            }
+          }
+        }
+
+        function openModal(modal) {
+          currentModal = modal;
+          lastFocusedEl = document.activeElement;
+
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+
+          if (mainEl) mainEl.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "hidden";
+
+          const focusables = getFocusable(modal);
+          const toFocus = focusables[0] || modal;
+          toFocus.focus();
+
+          modal.addEventListener("keydown", trapFocus);
+        }
+
+        function closeModal(modal) {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+
+          if (mainEl) mainEl.removeAttribute("aria-hidden");
+          document.body.style.overflow = "";
+
+          modal.removeEventListener("keydown", trapFocus);
+          currentModal = null;
+
+          if (lastFocusedEl && typeof lastFocusedEl.focus === "function") lastFocusedEl.focus();
+        }
+
+        // Open modal handlers
+        document.querySelectorAll(".feature-card[data-modal]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-modal");
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            openModal(modal);
+          });
+        });
+
+        // Close modal handlers (overlay + close button)
+        document.querySelectorAll("[data-modal-close]").forEach((el) => {
+          el.addEventListener("click", () => {
+            const id = el.getAttribute("data-modal-close");
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            closeModal(modal);
+          });
+        });
+
+        // Escape closes modal
+        document.addEventListener("keydown", (event) => {
+          if (!currentModal) return;
+          if (event.key === "Escape") {
+            event.preventDefault();
+            closeModal(currentModal);
+          }
+        });
+
+        // GSAP hover interaction
+        const cards = document.querySelectorAll(".feature-card");
+
+        function hoverIn(card) {
+          if (reduceMotion) return;
+          if (window.gsap) {
+            window.gsap.to(card, {
+              y: -8,
+              scale: 1.02,
+              duration: 0.22,
+              ease: "power2.out",
+            });
+          }
+        }
+
+        function hoverOut(card) {
+          if (reduceMotion) return;
+          if (window.gsap) {
+            window.gsap.to(card, {
+              y: 0,
+              scale: 1,
+              duration: 0.18,
+              ease: "power2.out",
+            });
+          }
+        }
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => hoverIn(card));
+          card.addEventListener("mouseleave", () => hoverOut(card));
+          // Mirror hover with keyboard focus.
+          card.addEventListener("focus", () => hoverIn(card));
+          card.addEventListener("blur", () => hoverOut(card));
+        });
+      })();
+    </script>
+  </body>
+</html>
