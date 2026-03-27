@@ -79,6 +79,19 @@ Steps:
 7. Extract reusable pattern into `patterns/`
 8. Commit once the build + pattern are complete
 
+---
+
+## 6. Example Workflow: Feature Grid Variation
+
+1. Create folder and files manually
+2. Generate HTML in Cursor
+3. Refine structure if AI returns only card units
+4. Generate CSS in Cursor
+5. Review in browser
+6. Use multi-file prompting to evolve the component safely
+7. Store the reusable pattern in `patterns/`
+8. Commit when the example and pattern are both complete
+
 ## Purpose
 
 This file grows into a library of repeatable frontend workflows that connect reasoning, execution, and memory.
