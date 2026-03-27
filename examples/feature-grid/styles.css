@@ -1,0 +1,119 @@
+/* Feature grid (mobile-first) */
+
+:root {
+  --space-2: 1rem;
+  --space-3: 1.25rem;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+header {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: var(--space-3) 1rem var(--space-2);
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  margin-inline: auto;
+  max-width: 1000px;
+  align-items: stretch;
+}
+
+.feature-card {
+  background: #fcfeff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 14px;
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.feature-grid-section {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: var(--space-3) 1rem;
+  text-align: center;
+}
+
+.feature-grid-section h2 {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.feature-card__heading {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  color: #0f172a;
+}
+
+.feature-card__description {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: rgba(15, 23, 42, 0.78);
+}
+
+.feature-card__link {
+  margin: 0;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.feature-card__link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.feature-card__link a:hover,
+.feature-card__link a:focus-visible {
+  text-decoration: underline;
+}
+
+.feature-card__link a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.26);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+}

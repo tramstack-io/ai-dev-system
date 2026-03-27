@@ -189,6 +189,40 @@ Pattern notes:
 Related example:
 - `examples/weekly-planner/`
 
+---
+
+## 9. Feature Grid Pattern
+
+Use for:
+- Feature highlights
+- Service summaries
+- Product or platform benefits
+- Repeated promo/content cards
+
+Structure:
+- Parent section with heading and optional intro
+- Grid wrapper using `.feature-grid`
+- Repeated self-contained cards using `article.feature-card`
+
+Card structure:
+- `.feature-card__heading`
+- `.feature-card__description`
+- optional `.feature-card__link`
+
+Recommended layout:
+- 1 column on mobile
+- 2 columns on tablet
+- 4 columns on desktop
+
+Pattern notes:
+- Cards should remain self-contained
+- Keep class-based selectors, not DOM-dependent selectors
+- Grid can be centered within a max-width container
+- Variations can change alignment and visual style without changing structure
+
+Related example:
+- `examples/feature-grid-pattern-test/`
+
 ## Purpose
 
 This file grows over time as new layout patterns are discovered and refined.
