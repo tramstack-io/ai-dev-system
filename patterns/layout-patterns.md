@@ -159,7 +159,7 @@ Card structure (per day):
 - Secondary content slot (e.g. notes or free text)
 - Optional: status indicator, tag, or completion marker
 
-Naming conventions (replace planner/class prefix where appropriate dependent on project type context):
+Naming conventions (replace planner/class prefix where appropriate dependent on project context):
 - `.planner-grid` — outer grid wrapper
 - `.planner-card` — individual day or unit card
 - `.planner-card__heading` — card title
