@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontend Dev Dashboard</title>
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container vt-shell">
+        <header class="topbar">
+          <div class="brand" aria-label="Site brand">
+            <div class="avatar" aria-hidden="true"></div>
+          </div>
+
+          <nav class="nav" aria-label="Primary">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+
+        <header class="hero" id="about">
+          <div class="hero-title">
+            <h1>Tarun Ram</h1>
+            <span class="pill" aria-label="Tag">AI Code Engineer</span>
+          </div>
+          <p class="intro">
+            Frontend Dev Dashboard.
+            A lightweight homepage to jump into common UI examples while you’re
+            building and iterating.
+          </p>
+        </header>
+
+        <main class="content" id="projects" aria-label="Example links">
+          <section class="section">
+            <h2 class="section-title">I love building things</h2>
+
+            <div class="grid">
+              <article class="card">
+                <a
+                  class="card-link"
+                  href="../weekly-planner/"
+                  aria-label="Open Weekly Planner example"
+                  data-transition-link
+                >
+                  <div class="thumb" aria-hidden="true">
+                    <div class="thumb-labels" aria-hidden="true">
+                      <span class="thumb-label">Weekly</span>
+                      <span class="thumb-label">Grid</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3>Weekly Planner</h3>
+                    <p>A simple planner layout for practicing structure and spacing.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="card">
+                <a
+                  class="card-link"
+                  href="../feature-grid/"
+                  aria-label="Open Feature Grid example"
+                  data-transition-link
+                >
+                  <div class="thumb" aria-hidden="true">
+                    <div class="thumb-labels" aria-hidden="true">
+                      <span class="thumb-label">Grid</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3>Feature Grid Example</h3>
+                    <p>A clean feature grid for experimenting with cards and hierarchy.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="card">
+                <a
+                  class="card-link"
+                  href="../responsive-card-grid/"
+                  aria-label="Open Responsive Card Grid example"
+                  data-transition-link
+                >
+                  <div class="thumb" aria-hidden="true">
+                    <div class="thumb-labels" aria-hidden="true">
+                      <span class="thumb-label">Responsive</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3>Responsive Card Grid</h3>
+                    <p>A responsive grid pattern that adapts across screen sizes.</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer" id="contact">
+          <small>Tip: open in a local server for best results.</small>
+        </footer>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const supportsViewTransitions =
+          typeof document.startViewTransition === "function";
+        if (!supportsViewTransitions) return;
+
+        const isModifiedEvent = (event) =>
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          event.button !== 0;
+
+        const isEligibleLink = (link, event) => {
+          if (!link) return false;
+          if (isModifiedEvent(event)) return false;
+          if (link.target && link.target !== "_self") return false;
+          if (link.hasAttribute("download")) return false;
+          const href = link.getAttribute("href");
+          if (!href || href.startsWith("#") || href.startsWith("mailto:")) return false;
+          const destination = new URL(link.href, window.location.href);
+          if (destination.origin !== window.location.origin) return false;
+          if (destination.pathname === window.location.pathname) return false;
+          return true;
+        };
+
+        document.addEventListener("click", (event) => {
+          const link = event.target.closest("a[data-transition-link]");
+          if (!isEligibleLink(link, event)) return;
+
+          event.preventDefault();
+          document.documentElement.classList.add("is-routing");
+
+          document.startViewTransition(() => {
+            window.location.assign(link.href);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
