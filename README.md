@@ -31,13 +31,16 @@ This repo is part of a larger AI Operating System:
 
 ---
 
-## 🧱 Repository Structure
+## 🧱 Repository Structure (System Layout)
 ai-dev-system/
 ├── context-packs/ → reusable knowledge for AI tools
+├── docs/ → system overview and frontend rules
 ├── patterns/ → frontend patterns and best practices
-├── workflows/ → step-by-step dev processes
+├── workflows/ → step-by-step development processes
 ├── snippets/ → reusable code snippets
+├── examples/ → real implementations and demos
 ├── experiments/ → learning and testing
+└── README.md → system introduction
 
 ---
 
