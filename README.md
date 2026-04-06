@@ -32,6 +32,7 @@ This repo is part of a larger AI Operating System:
 ---
 
 ## 🧱 Repository Structure (System Layout)
+```bash
 ai-dev-system/
 ├── context-packs/ → reusable knowledge for AI tools
 ├── docs/ → system overview and frontend rules
@@ -41,6 +42,7 @@ ai-dev-system/
 ├── examples/ → real implementations and demos
 ├── experiments/ → learning and testing
 └── README.md → system introduction
+```
 
 ---
 
