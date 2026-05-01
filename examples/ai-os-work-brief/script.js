@@ -3,7 +3,6 @@
    - Improves in-page anchor scrolling without hijacking navigation.
    - Respects prefers-reduced-motion.
 */
-
 (() => {
   const root = document.documentElement;
   root.classList.add("js");
