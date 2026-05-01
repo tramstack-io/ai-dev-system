@@ -3,6 +3,7 @@
    - Improves in-page anchor scrolling without hijacking navigation.
    - Respects prefers-reduced-motion.
 */
+
 (() => {
   const root = document.documentElement;
   root.classList.add("js");
@@ -112,3 +113,33 @@
     history.pushState(null, "", href);
   });
 })();
+
+// ============================
+// PASSWORD GATE (add below existing code)
+// ============================
+
+function checkPassword() {
+  const input = document.getElementById("password").value;
+  const error = document.getElementById("gate-error");
+
+  if (input === "liberty-ai-os-2026") {
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("content-wrap").style.display = "block";
+
+    // remember session
+    sessionStorage.setItem("aios-access", "true");
+  } else {
+    if (error) error.hidden = false;
+  }
+}
+
+// auto-unlock if already entered in session
+document.addEventListener("DOMContentLoaded", () => {
+  if (sessionStorage.getItem("aios-access") === "true") {
+    const gate = document.getElementById("gate");
+    const content = document.getElementById("content-wrap");
+
+    if (gate) gate.style.display = "none";
+    if (content) content.style.display = "block";
+  }
+});

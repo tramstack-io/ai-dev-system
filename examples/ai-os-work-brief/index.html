@@ -20,6 +20,29 @@
   </head>
 
   <body>
+    <!-- PASSWORD GATE -->
+  <div id="gate" class="gate">
+    <div class="gate-inner">
+      <p class="section-label">INTERNAL PREVIEW</p>
+      <h1>AI OS for<br />Frontend Delivery</h1>
+      <p>Enter password to access this internal strategy brief.</p>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        autocomplete="current-password"
+      />
+
+      <button type="button" onclick="checkPassword()">Enter</button>
+
+      <p id="gate-error" class="gate-error" hidden>
+        Incorrect password.
+      </p>
+    </div>
+  </div>
+   <!-- PAGE CONTENT -->
+  <div id="content-wrap" style="display: none;">
     <a class="skip-link" href="#content">Skip to content</a>
 
     <header class="site-header" role="banner">
