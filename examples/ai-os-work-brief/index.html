@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="AI OS for Frontend Delivery — an internal strategy brief for building, validating, and scaling frontend work."
+    />
+    <title>AI OS for Frontend Delivery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Liberty London internal — frontend</span>
+        </div>
+
+        <nav class="site-nav" aria-label="Page">
+          <a class="nav-link" href="#summary">Summary</a>
+          <a class="nav-link" href="#problems">Problems</a>
+          <a class="nav-link" href="#system">System</a>
+          <a class="nav-link" href="#use-cases">Use cases</a>
+          <a class="nav-link" href="#ask">Ask</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+            <span class="theme-toggle__mode" data-theme-toggle-label>Light</span>
+          </button>
+        </nav>
+      </div>
+      <div class="container">
+        <div class="hairline" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <main id="content" class="site-main">
+      <!-- INTRO / HERO → SUMMARY (sticky rail only across this block) -->
+      <div class="intro">
+        <div class="container intro-grid">
+          <div class="intro-left">
+            <!-- SECTION 00 / HERO -->
+            <section class="section hero" aria-labelledby="hero-title">
+              <div class="reveal">
+                <p class="kicker">Work AI OS</p>
+                <h1 id="hero-title" class="hero-title">
+                  AI OS for<br />
+                  Frontend<br />
+                  Delivery
+                </h1>
+                <p class="hero-subtitle">
+                  A structured system for how frontend work is built, validated, and
+                  scaled —  across SFCC, Amplience, Dynamic Yield, and the Email Design System.
+                </p>
+
+                <ul class="outcomes" aria-label="Outcomes">
+                  <li><span class="dot" aria-hidden="true"></span>Faster delivery</li>
+                  <li>
+                    <span class="dot" aria-hidden="true"></span>More consistency
+                  </li>
+                  <li>
+                    <span class="dot" aria-hidden="true"></span>Less repeat work
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- SECTION 01 / EXECUTIVE SUMMARY -->
+            <section class="section" id="summary" aria-labelledby="summary-title">
+              <div class="section-head reveal">
+                <p class="section-label">SECTION 01 / SUMMARY</p>
+                <h2 id="summary-title" class="section-title">
+                  A system for<br />
+                  frontend delivery.
+                </h2>
+              </div>
+
+              <div class="prose reveal">
+                <p class="lead">
+                  Structuring how work is done. Assigning clear roles to tools. Turning
+                  outputs into reusable systems.
+                </p>
+                <p class="muted" style="margin-top: 0">
+                  Faster delivery. More consistency. Less repeat work.
+                </p>
+                <p class="muted">
+                  This is not “AI writing code.” It’s a deliberate operating system:
+                  reasoning before execution, controlled changes, and a repo that
+                  preserves decisions.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="hero-aside intro-rail reveal" aria-label="At a glance">
+            <div class="rail">
+              <div class="rail-item">
+                <div class="rail-label">SCOPE</div>
+                <div class="rail-title">Frontend</div>
+                <div class="rail-body">
+                  SFCC, Amplience, Dynamic Yield, Email Design, Performance.
+                </div>
+              </div>
+
+              <div class="rail-divider" aria-hidden="true"></div>
+
+              <div class="rail-item">
+                <div class="rail-label">SHAPE</div>
+                <div class="rail-title">Think → Build → Store → Reuse</div>
+                <div class="rail-body">A full loop. Each stage owned by one tool.</div>
+              </div>
+
+              <div class="rail-divider" aria-hidden="true"></div>
+
+              <div class="rail-item">
+                <div class="rail-label">STATUS</div>
+                <div class="rail-title">In use</div>
+                <div class="rail-body">Personal pilot. Ready to harden and share.</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- SECTION 02 / CURRENT PROBLEMS -->
+      <section class="section" id="problems" aria-labelledby="problems-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 02 / PROBLEMS</p>
+            <h2 id="problems-title" class="section-title">
+              Current problems.
+            </h2>
+          </div>
+
+          <ol class="problem-list" aria-label="Current problems">
+            <li class="problem reveal">
+              <div class="problem-index">Problem 01</div>
+              <div class="problem-body">
+                <h3 class="problem-title">Email fragmentation</h3>
+                <p class="problem-strap">Same patterns, parallel implementations.</p>
+                <p class="problem-copy">
+                  Buttons, headers, and modules exist in slightly-different copies across
+                  Responsys and Dynamic Yield templates. Older campaign-based builds carry
+                  inconsistencies in responsiveness, spacing, and dark mode — each
+                  refactor a manual pass.
+                </p>
+                <p class="impact">
+                  <span class="impact-label">Impact</span>
+                  Slower iteration. Inconsistent rendering. Growing QA load.
+                </p>
+              </div>
+            </li>
+
+            <li class="problem reveal">
+              <div class="problem-index">Problem 02</div>
+              <div class="problem-body">
+                <h3 class="problem-title">Amplience &amp; SFCC</h3>
+                <p class="problem-strap">Two systems, one boundary, no map.</p>
+                <p class="problem-copy">
+                  Content types have grown organically. How frontend templates connect
+                  to PDP, PLP, slots, and ISML isn't documented in one place. New work
+                  begins with time lost understanding existing structures.
+                </p>
+                <p class="impact">
+                  <span class="impact-label">Impact</span>
+                  Time lost understanding existing structures. Duplicate types. Brittle
+                  templates.
+                </p>
+              </div>
+            </li>
+
+            <li class="problem reveal">
+              <div class="problem-index">Problem 03</div>
+              <div class="problem-body">
+                <h3 class="problem-title">Documentation falls behind delivery</h3>
+                <p class="problem-copy">
+                  Knowledge lives in code, not in a shared system.
+                </p>
+              </div>
+            </li>
+
+            <li class="problem reveal">
+              <div class="problem-index">Problem 04</div>
+              <div class="problem-body">
+                <h3 class="problem-title">Inconsistent design handoff</h3>
+                <p class="problem-copy">
+                  Unclear specifications across spacing, states, and tokens — with no shared
+                  source between Figma and code.
+                </p>
+              </div>
+            </li>
+
+            <li class="problem reveal">
+              <div class="problem-index">Problem 05</div>
+              <div class="problem-body">
+                <h3 class="problem-title">Repetitive, fragmented workflows</h3>
+                <p class="problem-copy">
+                  Campaigns and content updates carry their own steps. Effort
+                  accumulates and delivery slows.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SECTION 03 / SYSTEM LOOP -->
+      <section class="section" id="system" aria-labelledby="system-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="system-title" class="section-title">
+              One loop.<br />
+              Four stages.
+            </h2>
+          </div>
+
+          <div class="stages-grid" role="list" aria-label="System loop stages">
+            <article class="stage reveal" role="listitem">
+              <header class="stage-head">
+                <p class="stage-label">STAGE 01 — THINK</p>
+                <h3 class="stage-title">Claude Code</h3>
+              </header>
+              <p class="stage-copy">Structured reasoning before code. Scope, constraints, edge cases.</p>
+              <footer class="stage-foot">STRATEGY &amp; REASONING</footer>
+            </article>
+
+            <article class="stage reveal" role="listitem">
+              <header class="stage-head">
+                <p class="stage-label">STAGE 02 — BUILD</p>
+                <h3 class="stage-title">Cursor</h3>
+              </header>
+              <p class="stage-copy">
+                Execution against an explicit plan. Reviewed changes, never unattended.
+              </p>
+              <footer class="stage-foot">EXECUTION LAYER</footer>
+            </article>
+
+            <article class="stage reveal" role="listitem">
+              <header class="stage-head">
+                <p class="stage-label">STAGE 03 — STORE</p>
+                <h3 class="stage-title">GitHub</h3>
+              </header>
+              <p class="stage-copy">
+                Patterns, workflows, decisions and conventions captured in the repo.
+              </p>
+              <footer class="stage-foot">SYSTEM MEMORY</footer>
+            </article>
+
+            <article class="stage reveal" role="listitem">
+              <header class="stage-head">
+                <p class="stage-label">STAGE 04 — REUSE</p>
+                <h3 class="stage-title">Claude Skills + Figma</h3>
+              </header>
+              <p class="stage-copy">
+                Claude Skills and <span class="mono">design.md</span> replay yesterday’s standards into today’s work.
+              </p>
+              <footer class="stage-foot">LEVERAGE</footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 04 / MAPPED TO REAL WORK -->
+      <section class="section" aria-labelledby="mapped-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="mapped-title" class="section-title">
+              How the loop maps<br />
+              to real work.
+            </h2>
+          </div>
+
+          <div class="map-grid reveal" role="table" aria-label="Mapped to real work">
+            <div class="map-row" role="row">
+              <div class="map-key" role="rowheader">Planning</div>
+              <div class="map-val" role="cell">
+                Scoping content types, planning refactors, briefing templates before
+                code.
+              </div>
+            </div>
+            <div class="map-row" role="row">
+              <div class="map-key" role="rowheader">Building</div>
+              <div class="map-val" role="cell">
+                Frontend components across SFCC, Amplience, Dynamic Yield · Email Design templates · components
+                against Figma.
+              </div>
+            </div>
+            <div class="map-row" role="row">
+              <div class="map-key" role="rowheader">Storing</div>
+              <div class="map-val" role="cell">
+                Patterns and workflows captured · <span class="mono">design.md</span> · decisions and audit findings
+                filed in the repo.
+              </div>
+            </div>
+            <div class="map-row" role="row">
+              <div class="map-key" role="rowheader">Reusing</div>
+              <div class="map-val" role="cell">
+                Skills enforce accessibility, performance, naming · <span class="mono">design.md</span> replays tokens into
+                every component.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05 / TOOL ROLES -->
+      <section class="section" aria-labelledby="tools-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="tools-title" class="section-title">
+              Four tools.<br />
+              Four jobs.<br />
+              Nothing exotic.
+            </h2>
+          </div>
+
+          <div class="tools-grid">
+            <article class="tool reveal">
+              <h3 class="tool-title">Claude</h3>
+              <p class="tool-copy">
+                <strong class="tool-phase">Think</strong> — Reasoning, planning, code review. Plans before execution.
+              </p>
+            </article>
+            <article class="tool reveal">
+              <h3 class="tool-title">Cursor</h3>
+              <p class="tool-copy">
+                <strong class="tool-phase">Build</strong> — Code execution inside the repo. Diffs reviewed and committed by hand.
+              </p>
+            </article>
+            <article class="tool reveal">
+              <h3 class="tool-title">GitHub</h3>
+              <p class="tool-copy">
+                <strong class="tool-phase">Store</strong> — System memory. Code, <span class="mono">design.md</span>, decisions, skills — all in the repo.
+              </p>
+            </article>
+            <article class="tool reveal">
+              <h3 class="tool-title">Figma</h3>
+              <p class="tool-copy">
+                <strong class="tool-phase">Reuse</strong> — The design contract. Tokens and specs mirrored into <span class="mono">design.md</span>.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 06 / STAGE DEEP DIVES -->
+      <section class="section" aria-labelledby="dives-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="dives-title" class="section-title">
+              How the loop<br />
+              works in practice.
+            </h2>
+          </div>
+
+          <div class="dives">
+            <article class="dive reveal">
+              <header class="dive-head">
+                <p class="dive-label">STAGE 01 — THINK</p>
+                <h3 class="dive-title">Claude Code</h3>
+              </header>
+              <p class="dive-copy">
+                Structured reasoning before any code is written. Scope, constraints, edge cases,
+                naming, and the shape of the change — all decided upfront.
+              </p>
+              <div class="code-block" role="group" aria-label="Example prompt block">
+                <div class="code-title">Example prompt</div>
+                <pre><code>Plan refactor
+— list shared modules across Responsys templates
+— group by reuse pattern
+— propose partials structure
+— flag dark-mode &amp; spacing</code></pre>
+              </div>
+              <p class="muted">
+                <span class="impact-label">In practice</span>
+                Before opening the code editor; scope a refactor, draft a content-type plan, write the brief for a campaign template.
+              </p>
+            </article>
+
+            <article class="dive reveal">
+              <header class="dive-head">
+                <p class="dive-label">STAGE 02 — BUILD</p>
+                <h3 class="dive-title">Cursor</h3>
+              </header>
+              <p class="dive-copy">
+                Execution against the plan. Frontend components across SFCC, Amplience, Dynamic Yield, and Email Design —
+                always reviewed, not automated.
+              </p>
+              <div class="code-block" role="group" aria-label="Workflow block">
+                <div class="code-title">Workflow</div>
+                <pre><code>Build component
+— follow design.md or specific-pattern.md
+— reuse existing patterns
+— propose change
+— wait for review
+— commit on approval</code></pre>
+              </div>
+              <p class="muted">
+                <span class="impact-label">In practice</span>
+                Cursor works the plan inside the repo. Each change is reviewed step-by-step before it lands on a branch or site.
+              </p>
+            </article>
+
+            <article class="dive reveal">
+              <header class="dive-head">
+                <p class="dive-label">STAGE 03 — STORE</p>
+                <h3 class="dive-title">GitHub</h3>
+              </header>
+              <p class="dive-copy">
+                Patterns, workflows, decisions, and conventions captured where engineering already looks. The system has
+                memory between sessions.
+              </p>
+              <div class="code-block" role="group" aria-label="Repo structure block">
+                <div class="code-title">Stored in the repo</div>
+                <pre><code>/system
+design.md
+skills/
+decisions/
+workflows/
+audits/</code></pre>
+              </div>
+              <p class="muted">
+                <span class="impact-label">In practice</span>
+                Audit findings filed alongside the code. Decisions logged with intent. <span class="mono">design.md</span> kept current as part of every change.
+              </p>
+            </article>
+
+            <article class="dive reveal">
+              <header class="dive-head">
+                <p class="dive-label">STAGE 04 — REUSE</p>
+                <h3 class="dive-title">Skills + Figma</h3>
+              </header>
+              <p class="dive-copy">
+                Yesterday’s standards replayed into today’s work. Skills enforce checks; Figma + <span class="mono">design.md</span> replay tokens into
+                every component.
+              </p>
+              <div class="code-block" role="group" aria-label="Checklist block">
+                <div class="code-title">Replayed automatically</div>
+                <pre><code>On every task
+— accessibility check
+— performance budget
+— consistent naming
+— house conventions
+— tokens from design.md</code></pre>
+              </div>
+              <p class="muted">
+                <span class="impact-label">In practice</span>
+                A new component starts inside <span class="mono">design.md</span>, inherits skills, and reuses patterns already approved — not rediscovered each time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 07 / DESIGN LAYER -->
+      <section class="section" aria-labelledby="design-title">
+        <div class="container">
+          <div class="design-shell">
+            <div class="design-left">
+              <div class="section-head reveal">
+                <p class="section-label">SECTION 03 / THE SYSTEM</p>
+                <h2 id="design-title" class="section-title">
+                  <span class="mono">design.md</span> —<br />
+                  one file that bridges<br />
+                  design and code.
+                </h2>
+              </div>
+
+              <div class="prose reveal">
+                <p class="lead">
+                  One file in the repo. Tokens, spacing, and component contracts in plain
+                  text. Designers, engineers, and AI tools all read the same source.
+                </p>
+                <p class="muted">
+                  → Tokens stay in lockstep with Figma.<br />
+                  → Components carry their own contract.<br />
+                  → Drift becomes a diff, not a debate.
+                </p>
+              </div>
+            </div>
+
+            <div class="code-block reveal design-code" role="group" aria-label="design.md mini block">
+              <div class="code-title">design.md</div>
+              <pre><code>## Tokens
+color.brand.primary = #4A0E37
+color.surface.warm = #F5F2ED
+space.grid = 8
+radius.button = 0
+
+## Components
+Button/Primary
+— must support keyboard focus ring
+— min hit target: 44px
+— track: cta_click(name, position)</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 08 / SKILLS SYSTEM -->
+      <section class="section" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="skills-title" class="section-title">
+              Claude Skills replace memory<br />
+              with enforcement.
+            </h2>
+          </div>
+
+          <div class="skills-top">
+            <div class="prose reveal">
+              <p class="lead">
+                A skill is a reusable instruction set Claude follows on every task. Standards enforced at write time —
+                not caught in review.
+              </p>
+            </div>
+            <blockquote class="quote reveal">
+              <p>
+                “Don't trust me to remember.<br />
+                Make the system check.”
+              </p>
+            </blockquote>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill reveal">
+              <h3 class="skill-title">Accessibility</h3>
+              <p class="skill-copy">
+                WCAG checks on every component. Contrast, focus order, labelling, keyboard reachability — flagged at write time.
+              </p>
+            </article>
+            <article class="skill reveal">
+              <h3 class="skill-title">Performance</h3>
+              <p class="skill-copy">
+                Budget-aware by default. Image sizing, lazy loading, and weight thresholds surfaced before changes are reviewed.
+              </p>
+            </article>
+            <article class="skill reveal">
+              <h3 class="skill-title">Naming</h3>
+              <p class="skill-copy">
+                Consistent naming and structure. A single pattern across components and campaigns — readable to engineering, marketing, and analytics.
+              </p>
+            </article>
+            <article class="skill reveal">
+              <h3 class="skill-title">Conventions</h3>
+              <p class="skill-copy">
+                House style, without thinking. Folder structure, naming, commit notes — boring, but expensive when ignored.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 09 / COWORK TIERS -->
+      <section class="section" aria-labelledby="tiers-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 03 / THE SYSTEM</p>
+            <h2 id="tiers-title" class="section-title">
+              Used in tiers —<br />
+              reviewed, not automated.
+            </h2>
+          </div>
+
+          <div class="tiers-grid">
+            <article class="tier reveal">
+              <h3 class="tier-title">Beginner</h3>
+              <p class="tier-copy">
+                <span class="impact-label">Use</span>
+                Orientation, naming suggestions, copy editing.
+              </p>
+              <p class="tier-control">
+                <span class="impact-label">Control</span>
+                No write access. Step-by-step validation.
+              </p>
+            </article>
+
+            <article class="tier reveal">
+              <h3 class="tier-title">Intermediate</h3>
+              <p class="tier-copy">
+                <span class="impact-label">Use</span>
+                Bounded edits in a single component. Reviewed changes, one at a time.
+              </p>
+              <p class="tier-control">
+                <span class="impact-label">Control</span>
+                Branch only. Controlled updates. Tests must pass.
+              </p>
+            </article>
+
+            <article class="tier reveal">
+              <h3 class="tier-title">Advanced</h3>
+              <p class="tier-copy">
+                <span class="impact-label">Use</span>
+                Multi-file audits, structured refactors with clear scope.
+              </p>
+              <p class="tier-control">
+                <span class="impact-label">Control</span>
+                Plan reviewed first. Manual sign-off on every change.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10 / USE CASES -->
+      <section class="section" id="use-cases" aria-labelledby="usecases-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 04 / USE CASES</p>
+            <h2 id="usecases-title" class="section-title">
+              Use cases.
+            </h2>
+          </div>
+
+          <div class="usecases-table reveal" role="table" aria-label="Use cases table">
+            <div class="usecases-row" role="row">
+              <div class="usecases-key" role="rowheader">
+                <div class="usecases-kicker">Use case 01</div>
+                <div class="usecases-title">Email design system refactor(s)</div>
+              </div>
+              <div class="usecases-val" role="cell">
+                <div class="usecases-cells">
+                  <div class="uc-cell">
+                    <div class="uc-label">Problem</div>
+                    <div class="uc-copy">
+                      A legacy backlog of campaign templates needs refactor. Modules live in parallel copies across Responsys.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Current pain</div>
+                    <div class="uc-copy">
+                      Inconsistent rendering, dark mode handling, and spacing across templates. Single changes touch many files.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Solution</div>
+                    <div class="uc-copy">
+                      Map templates against <span class="mono">design.md</span>, identify inconsistencies, refactor into a shared module set — reviewed, not automated.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Outcome</div>
+                    <div class="uc-copy">
+                      Faster updates. Reduced QA issues. A scalable component system across the email programme.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="usecases-row" role="row">
+              <div class="usecases-key" role="rowheader">
+                <div class="usecases-kicker">Use case 02</div>
+                <div class="usecases-title">Amplience template audit</div>
+              </div>
+              <div class="usecases-val" role="cell">
+                <div class="usecases-cells">
+                  <div class="uc-cell">
+                    <div class="uc-label">Problem</div>
+                    <div class="uc-copy">
+                      Content types and Handlebars templates have accumulated. Legacy template drift is unmapped.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Current pain</div>
+                    <div class="uc-copy">
+                      No audit visibility. Old templates stay live because no one has time to confirm they're unused.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Solution</div>
+                    <div class="uc-copy">
+                      A structured audit of templates and usage — mapping relationships between content types and site output. Reviewed, not automated.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Outcome</div>
+                    <div class="uc-copy">
+                      A current map of the Amplience &amp; SFCC seam — the artefact we never had time to write by hand.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="usecases-row" role="row">
+              <div class="usecases-key" role="rowheader">
+                <div class="usecases-kicker">Use case 03</div>
+                <div class="usecases-title">Proactive frontend performance</div>
+              </div>
+              <div class="usecases-val" role="cell">
+                <div class="usecases-cells">
+                  <div class="uc-cell">
+                    <div class="uc-label">Problem</div>
+                    <div class="uc-copy">
+                      Performance is measured episodically. Issues across PDP, PLP, and content blocks surface late.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Current pain</div>
+                    <div class="uc-copy">
+                      Slow issue identification. Regressions live for days before anyone notices, making root cause harder to isolate.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Solution</div>
+                    <div class="uc-copy">
+                      Routine checks across templates and variants. Potential light integration with staging URLs. Advisory first — reviewed, not automated.
+                    </div>
+                  </div>
+                  <div class="uc-cell">
+                    <div class="uc-label">Outcome</div>
+                    <div class="uc-copy">
+                      Visibility. Faster issue identification. Proactive improvements — not a quarterly project.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 11 / FUTURE VISION -->
+      <section class="section" aria-labelledby="future-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 05 / FUTURE</p>
+            <h2 id="future-title" class="section-title">
+              Where this goes next —<br />
+              practical next steps.
+            </h2>
+          </div>
+
+          <div class="future-grid">
+            <article class="future reveal">
+              <h3 class="future-title">01 — Live performance dashboard</h3>
+              <p class="future-copy">
+                A team-visible view rolling up checks across homepage, PDP, PLP, and DY variants — weight, image size, render cost, trend over time.
+              </p>
+            </article>
+            <article class="future reveal">
+              <h3 class="future-title">02 — Accessibility monitoring</h3>
+              <p class="future-copy">
+                Continuous checks across staging surfaced as tickets the moment a regression appears — not weeks later by a user.
+              </p>
+            </article>
+            <article class="future reveal">
+              <h3 class="future-title">03 — System-level improvements</h3>
+              <p class="future-copy">
+                When Figma, <span class="mono">design.md</span>, and shipped components disagree, the system proposes the fix as a reviewed change.
+              </p>
+            </article>
+          </div>
+
+          <p class="closing-line reveal">
+            <span class="hairline" aria-hidden="true"></span>
+            Each reduces manual work. Together, they turn standards into something the
+            system maintains.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 12 / RISK AND CONTROL -->
+      <section class="section" aria-labelledby="risk-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 06 / RISK</p>
+            <h2 id="risk-title" class="section-title">
+              Where AI is used —<br />
+              and where it is not.
+            </h2>
+          </div>
+
+          <div class="two-col">
+            <div class="panel reveal" aria-label="Used for">
+              <h3 class="panel-title">Used for</h3>
+              <ul class="bullets">
+                <li>Reasoning and planning before code.</li>
+                <li>Bounded code generation in a branch.</li>
+                <li>Audits, documentation, scoped refactors.</li>
+                <li>Standards enforcement via Claude Skills.</li>
+                <li>
+                  Supporting structured technical outputs (e.g. briefs, component descriptions)
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel reveal" aria-label="Not used for">
+              <h3 class="panel-title">Not used for</h3>
+              <ul class="bullets">
+                <li>Production deploys.</li>
+                <li>Secrets, credentials, customer data.</li>
+                <li>Unattended writes to main.</li>
+                <li>Decisions about people or scope.</li>
+                <li>Anything outside standard review and approval processes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 13 / ASK -->
+      <section class="section" id="ask" aria-labelledby="ask-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">SECTION 07 / ASK</p>
+            <h2 id="ask-title" class="section-title">
+              Three asks —<br />
+              small, sequenced,<br />
+              reversible.
+            </h2>
+          </div>
+
+          <ol class="ask-list" aria-label="Three asks">
+            <li class="ask-item reveal">
+              <div class="ask-index">01</div>
+              <div class="ask-body">
+                <h3 class="ask-title">Cursor subscription</h3>
+                <p class="ask-copy">
+                  (+ maybe more lightweight apps…) The execution layer. Already in personal use.
+                </p>
+              </div>
+            </li>
+            <li class="ask-item reveal">
+              <div class="ask-index">02</div>
+              <div class="ask-body">
+                <h3 class="ask-title">Time to harden the system</h3>
+                <p class="ask-copy">
+                  Document skills, write <span class="mono">design.md</span>, prepare a tier-one
+                  rollout.
+                </p>
+              </div>
+            </li>
+            <li class="ask-item reveal">
+              <div class="ask-index">03</div>
+              <div class="ask-body">
+                <h3 class="ask-title">A path to team rollout</h3>
+                <p class="ask-copy">
+                  Once stable, share with team under the same risk tiers.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SECTION 14 / CLOSING -->
+      <section class="section closing" aria-labelledby="closing-title">
+        <div class="container">
+          <div class="closing-inner reveal">
+            <p class="section-label">SECTION 08 / CLOSING</p>
+            <h2 id="closing-title" class="closing-title">
+              This is about systems,<br />
+              not tools.
+            </h2>
+            <p class="closing-sub">
+              TOOLS CHANGE. THE SYSTEM COMPOUNDS. END.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-title">AI OS for Frontend Delivery</p>
+          <p class="footer-sub">Internal strategy brief.</p>
+        </div>
+        <div class="footer-right">
+          <a class="to-top" href="#content">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
