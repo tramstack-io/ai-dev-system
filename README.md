@@ -1,70 +1,149 @@
-# AI Dev System
+# Personal AI Dev System
 
-A personal AI-powered frontend development system focused on building modern, performant, and accessible web experiences.
+A personal AI-powered frontend systems repository focused on building modern, performant, accessible, and reusable AI-native workflows.
 
 ---
 
 ## 🚀 What I'm Building
 
-This repository supports my personal development as a Front-End Developer using AI-assisted workflows.
+This repository supports my development as a Front-End Developer evolving into AI-native systems thinking and reusable engineering workflows.
 
-### Core Focus:
-- HTML & semantic structure
-- Modern CSS (Flexbox, Grid, responsive design)
-- CSS architecture & layout systems
-- Component-based thinking
-- Accessibility (WCAG, ARIA)
-- Performance optimisation
+The system combines:
+
+- frontend engineering
+- AI orchestration
+- reusable workflows
+- systems thinking
+- documentation
+- creative experimentation
+- long-term knowledge architecture
+
+---
+
+## 🧠 System Architecture
+
+This repository is the reusable intelligence layer inside a wider personal AI development ecosystem.
+
+It is NOT:
+
+- the portfolio
+- production projects
+- client work
+- random experimentation
+
+It IS:
+
+- reusable engineering intelligence
+- frontend systems thinking
+- AI-assisted workflows
+- operational documentation
+- reusable patterns and context
+- markdown-first system memory
+
+The wider structure is:
+
+```text
+Developer/
+├── ai-dev-system/
+├── projects/
+├── experiments/
+├── archives/
+└── workspaces/
+```
 
 ---
 
 ## 🧠 AI Workflow
 
-This repo is part of a larger AI Operating System:
+Think → Build → Store → Reuse
 
-- **Claude** → reasoning, architecture, problem solving  
-- **Cursor** → code execution, editing, refactoring  
-- **GitHub** → system memory (patterns, workflows, reusable assets)  
-- **Notion** → planning and system organisation  
-- **Craft** → documentation and clarity  
-- **Stitch** → UI exploration and early design concepts  
+### Think
+- ChatGPT
+- Claude
+
+### Build
+- Cursor
+- Claude Code
+
+### Store
+- GitHub + Markdown
+
+### Coordinate
+- ChatGPT Master Coordination Threads
+- Notion dashboards
 
 ---
 
-## 🧱 Repository Structure (System Layout)
-```bash
+## 🧱 Repository Structure
+
+```text
 ai-dev-system/
 ├── context-packs/ → reusable knowledge for AI tools
-├── docs/ → system overview and frontend rules
-├── patterns/ → frontend patterns and best practices
+├── docs/ → system overview and architecture
+├── patterns/ → frontend and AI patterns
 ├── workflows/ → step-by-step development processes
-├── snippets/ → reusable code snippets
-├── examples/ → real implementations and demos
-├── experiments/ → learning and testing
-└── README.md → system introduction
+├── snippets/ → reusable code and prompt snippets
+├── templates/ → reusable markdown and project templates
+├── cheatsheets/ → quick reference guides
+├── examples/ → reusable examples and MVP references
+├── README.md → system introduction
+└── .vscode/ → local workspace configuration
 ```
 
 ---
 
-## 🧪 What You'll See Here
+## 💻 Core Focus Areas
 
-- Frontend experiments (HTML/CSS builds)
-- Layout systems (CSS Grid, Flexbox)
-- Component patterns
-- Accessibility-first implementations
-- Performance-focused solutions
-- AI-assisted development workflows
+### Frontend Engineering
+- semantic HTML
+- accessibility-first development
+- modern CSS architecture
+- responsive systems
+- component thinking
+- performance optimisation
+
+### AI-Native Development
+- Claude-assisted workflows
+- Cursor workflows
+- AI context engineering
+- reusable prompts
+- AI workflow orchestration
+- markdown-first knowledge systems
+
+### Systems Thinking
+- reusable architecture
+- operational clarity
+- workflow design
+- knowledge compounding
+- scalable documentation
+- cognitive load reduction
+
+---
+
+## 🧪 What Lives Here
+
+- frontend patterns
+- reusable layouts
+- AI workflows
+- accessibility systems
+- performance strategies
+- workflow documentation
+- prompt systems
+- reusable snippets
+- development experiments worth preserving
 
 ---
 
 ## 🎯 Goal
 
-To build a scalable, AI-assisted frontend workflow where:
+To build a scalable AI-assisted frontend workflow where:
 
-- Thinking is structured  
-- Code is reusable  
-- Patterns are documented  
-- Learning compounds over time  
+- thinking is structured
+- code is reusable
+- workflows are documented
+- learning compounds over time
+- AI becomes operational leverage
+- systems reduce cognitive overload
 
 ---
 
@@ -73,7 +152,24 @@ To build a scalable, AI-assisted frontend workflow where:
 > I convert conversations into systems  
 > I separate thinking from execution  
 > I build reusable workflows  
+> Temporary thinking can stay in chats  
+> Reusable thinking must become markdown
 
 ---
 
-Built as part of my personal AI Operating System.
+## 📍 Current Stage
+
+The system has moved from fragmented experimentation into ecosystem consolidation and application.
+
+The focus now is:
+
+- clarity
+- consistency
+- reusable leverage
+- real-world outputs
+- frontend excellence
+- AI-native workflow integration
+
+---
+
+Built as part of my Personal AI Operating System.

@@ -76,3 +76,4 @@ Use when ensuring keyboard focus is visible.
 ## Purpose
 
 This file grows into a practical library of small, reusable frontend utilities.
+
